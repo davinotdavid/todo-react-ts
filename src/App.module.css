@@ -7,4 +7,5 @@
 .inputSection {
   display: flex;
   gap: 8px;
+  margin-block-end: 4rem;
 }

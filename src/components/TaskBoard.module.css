@@ -1,0 +1,29 @@
+.boardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.badge {
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-inline-start: 8px;
+}
+
+.spanTasksCreated {
+  color: var(--blue);
+}
+
+.spanTasksFinished {
+  color: var(--purple);
+}
+
+.tasksContainer {
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+}

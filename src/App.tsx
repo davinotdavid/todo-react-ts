@@ -3,6 +3,7 @@ import CreateTaskButton from "./components/CreateTaskButton";
 
 import Header from "./components/Header";
 import Input from "./components/Input";
+import TaskBoard from "./components/TaskBoard";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Input placeholder="Add a new task" />
           <CreateTaskButton />
         </section>
-        <section></section>
+
+        <TaskBoard />
       </main>
     </>
   );
