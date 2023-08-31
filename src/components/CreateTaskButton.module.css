@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1rem;
+  color: var(--gray-100);
+  background-color: var(--blue-dark);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+}

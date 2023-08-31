@@ -1,0 +1,10 @@
+.main {
+  max-width: 736px;
+  margin: -27px auto 0px;
+  padding: 0px 1rem;
+}
+
+.inputSection {
+  display: flex;
+  gap: 8px;
+}
