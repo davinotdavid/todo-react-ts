@@ -1,3 +1,4 @@
+import NoTasks from "./NoTasks";
 import styles from "./TaskBoard.module.css";
 
 export default function TaskBoard() {
@@ -14,7 +15,7 @@ export default function TaskBoard() {
         </div>
       </header>
 
-      <div className={styles.tasksContainer}></div>
+      <NoTasks />
     </section>
   );
 }

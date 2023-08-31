@@ -1,0 +1,15 @@
+.container {
+  border-radius: 8px;
+  border-top: 1px solid var(--gray-400);
+  padding: 4rem 0px;
+  text-align: center;
+}
+
+.container img {
+  margin-block-end: 1rem;
+}
+
+.container p {
+  color: var(--gray-300);
+  margin: 0;
+}

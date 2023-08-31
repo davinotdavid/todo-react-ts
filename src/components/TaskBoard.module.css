@@ -22,8 +22,3 @@
 .spanTasksFinished {
   color: var(--purple);
 }
-
-.tasksContainer {
-  border-radius: 8px;
-  border-top: 1px solid var(--gray-400);
-}
