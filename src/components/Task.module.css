@@ -9,16 +9,28 @@
   color: var(--gray-100);
 }
 
+.taskItem + .taskItem {
+  margin-block-start: 0.75rem;
+}
+
 .taskItem input[type="checkbox"] {
   width: 24px;
   height: 24px;
+  margin: 0;
 }
 
 .taskItem p {
   margin: 0;
+  width: 100%;
 }
 
 .taskItem button {
   width: 24px;
   height: 24px;
+  background-color: var(--gray-500);
+  border: none;
+}
+
+.taskItem button:hover {
+  cursor: pointer;
 }

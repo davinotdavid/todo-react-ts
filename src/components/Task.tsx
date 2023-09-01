@@ -20,7 +20,7 @@ export default function Task({
 }: TaskProps) {
   return (
     <li className={styles.taskItem}>
-      <input type="checkbox" checked={checked} onClick={() => onChecked(id)} />
+      <input type="checkbox" checked={checked} onChange={() => onChecked(id)} />
       <p>{text}</p>
       <button onClick={() => onDelete(id)}>
         <img src={trashcanSVG} alt="" />

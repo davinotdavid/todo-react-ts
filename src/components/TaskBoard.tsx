@@ -37,6 +37,7 @@ export default function TaskBoard({
       {tasks.length ? (
         tasks.map((task) => (
           <Task
+            key={task.id}
             task={task}
             onDelete={onTaskDeleted}
             onChecked={onTaskChecked}
