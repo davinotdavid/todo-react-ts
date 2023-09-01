@@ -14,14 +14,32 @@
 }
 
 .taskItem input[type="checkbox"] {
+  appearance: none;
+  margin: 0;
   width: 24px;
   height: 24px;
-  margin: 0;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.taskItem input[type="checkbox"]:checked {
+  background-color: var(--purple-dark);
+  background-image: url('data:image/svg+xml,<svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.43059 0.342093L4.09865 4.67403L1.61618 2.19156L0.780273 3.02747L4.09865 6.34584L9.26649 1.178L8.43059 0.342093Z" fill="%23F2F2F2"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 5px 8px;
+  background-size: 2ch;
+  color: var(--white);
+  border: none;
+}
+
+.taskItem input[type="checkbox"]:checked + p {
+  color: var(--gray-300);
+  text-decoration: line-through;
 }
 
 .taskItem p {
   margin: 0;
-  width: 100%;
+  flex: 1;
 }
 
 .taskItem button {
@@ -29,8 +47,10 @@
   height: 24px;
   background-color: var(--gray-500);
   border: none;
+  border-radius: 4px;
 }
 
 .taskItem button:hover {
   cursor: pointer;
+  background-color: var(--gray-400);
 }
