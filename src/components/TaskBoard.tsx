@@ -1,21 +1,50 @@
 import NoTasks from "./NoTasks";
 import styles from "./TaskBoard.module.css";
+import Task, { TaskType } from "./Task";
 
-export default function TaskBoard() {
+interface TaskBoardProps {
+  tasks: TaskType[];
+  onTaskChecked: (taskId: string) => void;
+  onTaskDeleted: (taskId: string) => void;
+}
+
+export default function TaskBoard({
+  tasks,
+  onTaskChecked,
+  onTaskDeleted,
+}: TaskBoardProps) {
+  const checkedTasks = tasks.reduce(
+    (prev, current) => (current.checked ? ++prev : prev),
+    0
+  );
+  const totalTasks = tasks.length;
+
   return (
     <section>
       <header className={styles.boardHeader}>
         <div>
           <span className={styles.spanTasksCreated}>Tasks created</span>
-          <span className={styles.badge}>0</span>
+          <span className={styles.badge}>{totalTasks}</span>
         </div>
         <div>
           <span className={styles.spanTasksFinished}>Finished</span>
-          <span className={styles.badge}>0</span>
+          <span className={styles.badge}>
+            {totalTasks > 0 ? `${checkedTasks} of ${totalTasks}` : totalTasks}
+          </span>
         </div>
       </header>
 
-      <NoTasks />
+      {tasks.length ? (
+        tasks.map((task) => (
+          <Task
+            task={task}
+            onDelete={onTaskDeleted}
+            onChecked={onTaskChecked}
+          />
+        ))
+      ) : (
+        <NoTasks />
+      )}
     </section>
   );
 }

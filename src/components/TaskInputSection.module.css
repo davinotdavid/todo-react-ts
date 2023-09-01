@@ -1,3 +1,9 @@
+.inputSection {
+  display: flex;
+  gap: 8px;
+  margin-block-end: 4rem;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -16,4 +22,9 @@
 .button:hover {
   background-color: var(--blue);
   cursor: pointer;
+}
+
+.button:disabled {
+  background-color: var(--blue-darker);
+  cursor: not-allowed;
 }
