@@ -4,7 +4,7 @@ import styles from "./App.module.css";
 
 import Header from "./components/Header";
 import TaskBoard from "./components/TaskBoard";
-import TaskInputSection from "./components/TaskInputSection";
+import TaskInputForm from "./components/TaskInputForm";
 import type { TaskType } from "./components/Task";
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
     <>
       <Header />
       <main className={styles.main}>
-        <TaskInputSection onCreateTask={handleOnCreateTask} />
+        <TaskInputForm onCreateTask={handleOnCreateTask} />
         <TaskBoard
           tasks={tasks}
           onTaskChecked={handleOnTaskChecked}
